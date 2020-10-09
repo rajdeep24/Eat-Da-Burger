@@ -16,21 +16,21 @@ router.get("/", function (req, res) {
 	});
 });
 
-router.post("/api/cats", function (req, res) {
-	cat.create(["name", "sleepy"], [req.body.name, req.body.sleepy], function (result) {
+router.post("/api/burgers", function (req, res) {
+	cat.create(["name", "devoured"], [req.body.name, req.body.devoured], function (result) {
 		// Send back the ID of the new quote
 		res.json({ id: result.insertId });
 	});
 });
 
-router.put("/api/cats/:id", function (req, res) {
+router.put("/api/burgers/:id", function (req, res) {
 	const condition = "id = " + req.params.id;
 
 	console.log("condition", condition);
 
-	cat.update(
+	burger.update(
 		{
-			sleepy: req.body.sleepy,
+			devoured: req.body.devoured,
 		},
 		condition,
 		function (result) {
