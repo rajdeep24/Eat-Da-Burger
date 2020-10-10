@@ -1,17 +1,19 @@
 li {
-	padding: 5px;
-	margin: 5px;
-	background: #daab6e;
+	border-radius: 25px;
+	padding: 25px;
+	margin: 10px;
+	border: 2px solid black;
+	list-style-type: none;
+	font-size: 30px;
 }
 
 .label {
 	font-weight: bold;
 }
 
-.create-update-form {
-	padding: 5px;
-	margin: 5px;
-	background: aqua;
+.create-form {
+	padding: 10px;
+	margin: 10px;
 }
 
 .form-group {
