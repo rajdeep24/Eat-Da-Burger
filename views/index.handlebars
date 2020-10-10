@@ -27,8 +27,8 @@
         {{#unless devoured}}
           <li>
             {{burger_name}}
-            <button class="devoured float-right btn btn-success text-right px-2" data-id="{{id}}">Devour</button>
-            <button class="delete-burger float-right btn btn-danger mr-2 text-right px-2" data-id="{{id}}">Delete</button>
+            <button class="devoured  btn btn-success text-right px-2 mb-2 ml-2" data-id="{{id}}">Devour</button>
+            <button class="delete-burger  btn btn-danger mr-2 text-right mb-2 ml-2 px-2" data-id="{{id}}">Delete</button>
           </li>
         {{/unless}}
         {{/each}}
@@ -37,8 +37,14 @@
     <div class="col-12 col-lg-6 text-center">
       <h2>Burgers Devoured:</h2>
       <ul class="text-left burger-list">
-        <li>
-        </li>
+        {{#each burgers}}
+        {{#if devoured}}
+          <li>
+            {{burger_name}}
+            <button class="delete-burger  btn btn-danger mr-2 text-right mb-2 ml-2 px-2" data-id="{{id}}">Delete</button>
+          </li>
+        {{/if}}
+        {{/each}}
       </ul>
     </div>
   </div>
