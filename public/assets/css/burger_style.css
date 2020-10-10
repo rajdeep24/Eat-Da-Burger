@@ -1,8 +1,9 @@
 li {
 	border-radius: 25px;
+	border: 5px solid rgb(60, 160, 81);
 	padding: 25px;
 	margin: 10px;
-	border: 2px solid black;
+
 	list-style-type: none;
 	font-size: 30px;
 }
@@ -12,10 +13,17 @@ li {
 }
 
 .create-form {
+	border-radius: 25px;
+	border: 5px solid black;
 	padding: 10px;
-	margin: 10px;
+	margin: 25px;
 }
 
 .form-group {
-	margin-bottom: 5px;
+	border-radius: 25px;
+	margin-bottom: 15px;
+}
+
+.input {
+	border-style: groove;
 }
