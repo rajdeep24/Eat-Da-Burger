@@ -1,54 +1,47 @@
 
-<div class="container text-center">
-  <div class="row text-white bg-dark mb-4">
-    <div class="col-sm-12 ">
-      <h1>Eat-Da-Burgers</h1>
-      <h3>Rajer That Burger</h3>
+<div class="container">
+  <div class="row text-white bg-dark mb-5">
+    <div class="col-sm-12 text-center">
+      <h1>Rajer-That-Burgers!</h1>
+      <img src="/assets/img/burger.png" alt="burger" width="350px">
+      <h3>How many can you eat?</h3>
     </div>
   </div>
-</div>
-
-<div class="container justify-content-center">
-  <div class="row mx-2">
-    <div class="card border-0 rounded-0 mb-3 mx-4 center-text" id="options">
-      <h2 class="card-header text-center">Ready to eat da burgers!</h2>
-      <div class="card-body">
-        <div class="card-text"> 
-          {{#each burgers}}
-            {{#unless devoured}}
-              {{> burger-block devoured=true}}
-            {{/unless}}
-          {{/each}}
+  <div class="row">
+    <div class="col text-center">
+      <h2>Place an order: </h2>
+      <form class="create-form form-inline justify-content-center">
+        <div class="form-group">
+          <label for="bu">Burger Name:</label>
+          <input class="mx-3" type="text" id="bu" name="name">
         </div>
-      </div>
-    </div>
-    <div class="card border-0 rounded-0 mb-3 mx-4 center-text" id="options">
-      <h2 class="card-header text-center">Devoured Burgers!</h2>
-      <div class="card-body">
-        <div class="card-text">        
-          {{#each burgers}}
-            {{#if devoured}}
-              {{> burger-block devoured=false}}
-            {{/if}}
-          {{/each}}
-        </div>
-      </div>
-    </div>
-    <div class="card border-0 rounded-0 mb-3 mx-4 center-text" id="options">
-      <h2 class="card-header text-center">Place An Order</h2>
-      <div class="card-body">
-        <div class="card-text">
-          <form class="create-form">
-            <div class="form-group">
-              <label for="bu">Burger Name:</label>
-              <input type="text" id="bu" name="name">
-            </div>
-            <button type="submit" class="btn btn-outline-secondary rounded-0">Place Order</button>
-          </form>
-        </div>
-      </div>
+        <button class="btn btn-primary" type="submit">Submit Order</button>
+      </form>
     </div>
   </div>
+  <div class="row">
+    <div class="col-12 col-lg-6 text-center">
+      <h2>Burgers to-be devoured: </h2>
+      <ul class="text-left burger-list">
+        {{#each burgers}}
+        {{#unless devoured}}
+          <li>
+            {{burger_name}}
+            <button class="devoured float-right btn btn-success text-right px-2" data-id="{{id}}">Devour</button>
+            <button class="delete-burger float-right btn btn-danger mr-2 text-right px-2" data-id="{{id}}">Delete</button>
+          </li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-12 col-lg-6 text-center">
+      <h2>Burgers Devoured:</h2>
+      <ul class="text-left burger-list">
+        <li>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
 </div>
-
 
