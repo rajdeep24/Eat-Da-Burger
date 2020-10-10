@@ -1,19 +1,20 @@
+//need to add create and update burger options
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function () {
-	$(".change-burger").on("click", function (event) {
+	$(".change-devour").on("click", function (event) {
 		var id = $(this).data("id");
-		var newBurger = $(this).data("newburger");
+		var newDevour = $(this).data("newdevour");
 
-		var newBurgerState = {
-			devoured: newBurger,
+		var newDevourState = {
+			devoured: newDevour,
 		};
 
 		// Send the PUT request.
 		$.ajax("/api/burgers/" + id, {
 			type: "PUT",
-			data: newBurgerState,
+			data: newDevourState,
 		}).then(function () {
-			console.log("changed burger to", newBurger);
+			console.log("changed devour to", newDevour);
 			// Reload the page to get the updated list
 			location.reload();
 		});
@@ -24,8 +25,8 @@ $(function () {
 		event.preventDefault();
 
 		var newBurger = {
-			name: $("#ba").val().trim(),
-			sleepy: $("[name=devoured]:checked").val().trim(),
+			burger_name: $("#bu").val().trim(),
+			devoured: 0,
 		};
 
 		// Send the POST request.

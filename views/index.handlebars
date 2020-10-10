@@ -1,64 +1,54 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EAT DA BURGER!!</title>
-  <!-- CSS only -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<link rel="stylesheet" href="../public/assets/css/burger_style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="row mb-3">
-      <div class="col-sm-12 text-center mb-3 border">
-        <h1>Eat-Da-Burger!</h1>
-        <h3>Burgers on burgers on burgers!</h3>
-      </div>
+<div class="container text-center">
+  <div class="row text-white bg-dark mb-4">
+    <div class="col-sm-12 ">
+      <h1>Eat-Da-Burgers</h1>
+      <h3>Rajer That Burger</h3>
     </div>
-    <div class="row border">
-      <div class="col-sm-6 mb-3">
-        <h2>Burgers to-be devoured!</h2>
-        <ul>
+  </div>
+</div>
+
+<div class="container justify-content-center">
+  <div class="row mx-2">
+    <div class="card border-0 rounded-0 mb-3 mx-4 center-text" id="options">
+      <h2 class="card-header text-center">Ready to eat da burgers!</h2>
+      <div class="card-body">
+        <div class="card-text"> 
           {{#each burgers}}
             {{#unless devoured}}
-            <li>
-                {{burger_name}}
-            </li>
+              {{> burger-block devoured=true}}
             {{/unless}}
           {{/each}}
-        </ul>
-      </div>
-      <div class="col-sm-6 border mb-3">
-        <h2>Burgers that are devoured!</h2>
-
-        <ul>
-          {{#each burgers}}
-            {{#if devoured}}
-            <li>
-              {{burger_name}}
-            </li>
-            {{/if}}
-          {{/each}}
-        </ul>
+        </div>
       </div>
     </div>
-    <div class="row mb-3 border">
-      <div class="col-sm-12 text-center">
-        <h2>Add a burger</h2>
-        <form class="create-form">
-
-          <div class="form-group">
-            <label for="burger">Burger Name:</label>
-            <input type="text" id="burger" name="name">
-            <button type="submit">Add burger</button>
-          </div>
-
-        </form>
+    <div class="card border-0 rounded-0 mb-3 mx-4 center-text" id="options">
+      <h2 class="card-header text-center">Devoured Burgers!</h2>
+      <div class="card-body">
+        <div class="card-text">        
+          {{#each burgers}}
+            {{#if devoured}}
+              {{> burger-block devoured=false}}
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="card border-0 rounded-0 mb-3 mx-4 center-text" id="options">
+      <h2 class="card-header text-center">Place An Order</h2>
+      <div class="card-body">
+        <div class="card-text">
+          <form class="create-form">
+            <div class="form-group">
+              <label for="bu">Burger Name:</label>
+              <input type="text" id="bu" name="name">
+            </div>
+            <button type="submit" class="btn btn-outline-secondary rounded-0">Place Order</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</body>
-</html>
+</div>
+
 
