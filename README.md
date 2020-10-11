@@ -12,7 +12,7 @@
 
 For this project, I created a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM. To create this application, I followed the MVC design pattern; used Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
 
-This app allows users to orders burgers that they want to devour. Once they sumbit the burger order, the order then appears under the burders to-be deveoured section of the application. The user has a choice to either delete the order or devour the burger. If the user devours the burger, then the order is moved into a section called "Burgers devoured."
+This app allows users to orders burgers that they want to devour. Once they submig the burger order, the order then appears under the "Burgers to-be devoured" section of the application. Then the user has a choice to either delete the order or devour the burger. If the user devours the burger, then the order is moved into a section called "Burgers devoured. If the user chooses to delete the order, then the order is removed from the "Burgers to be devoured" list.
 
 ## Tools Used
 
