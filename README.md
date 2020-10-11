@@ -31,7 +31,7 @@ This app allows users to orders burgers that they want to devour. Once they subm
 
 Rajer-That-Burger can be accessed at heroku link provided below:
 
-Heroku Pages URL: <>
+Heroku Pages URL: <https://eat-da-burger-yoyo.herokuapp.com/>
 
 Github Repository: <https://github.com/rajdeep24/Eat-Da-Burger>
 
