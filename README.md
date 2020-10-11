@@ -16,7 +16,7 @@ This app allows users to orders burgers that they want to devour. Once they subm
 
 ## Tools Used
 
-- HTML/Handlebars
+- HTML
 - CSS
 - JavaScript
 - Bootstrap
